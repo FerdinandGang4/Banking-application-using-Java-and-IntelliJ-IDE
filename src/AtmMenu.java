@@ -11,6 +11,12 @@ public class AtmMenu extends JFrame implements ActionListener {
     JTextField userId;
     JTextField userPinCode;
 
+    //labels components
+    JLabel userNameLabel;
+    JLabel userIdLable;
+    JLabel pinLabel;
+    JLabel addressLabel;
+
     Border transactionBorder;
     Border createAccoutBorder;
 
@@ -23,6 +29,7 @@ public class AtmMenu extends JFrame implements ActionListener {
     JButton checkBanlanceButton;
     JButton makeDepositButton;
     JButton widrawCashButton;
+    JButton logingButton ;
 
     //Adding radio buttons
     JRadioButton savingAccountRb;
@@ -31,6 +38,11 @@ public class AtmMenu extends JFrame implements ActionListener {
     AtmMenu()
     {
         super("WELCOME TO MIU BANKING APP");
+        //Initializing the labels
+        userIdLable = new JLabel("User ID:");
+        userNameLabel = new JLabel("User Name:");
+        addressLabel = new JLabel("Address");
+        pinLabel = new JLabel("Your Pin");
         //text Fields
         userId = new JFormattedTextField();
         userPinCode = new JFormattedTextField();
@@ -43,12 +55,13 @@ public class AtmMenu extends JFrame implements ActionListener {
         checkBanlanceButton = new JButton("CheckBalance");
         makeDepositButton = new JButton("Make Deposite");
         widrawCashButton = new JButton("Widraw Cash");
+        logingButton = new JButton("Login");
 
         //Initializing Radio buttons
         savingAccountRb = new JRadioButton("Saving account");
-        savingAccountRb.setVisible(false);
+       // savingAccountRb.setVisible(false);
         currentAccoutRb = new JRadioButton("currentAccount");
-        currentAccoutRb.setVisible(false);
+       // currentAccoutRb.setVisible(false);
 
         //Initializing the borders
         transactionBorder = BorderFactory.createLineBorder(Color.red,15);
@@ -58,24 +71,36 @@ public class AtmMenu extends JFrame implements ActionListener {
         panelB = new JPanel();
         panelC = new JPanel();
 
-        userAddress.setColumns(15);
-        userAddress.setText("Your address");
-        userAddress.setVisible(false);
+        userAddress.setText("Please enter your address");
+        //userAddress.setVisible(false);
         userName.setColumns(15);
-        userName.setText("Your name");
-        userName.setVisible(false);
-        userId.setColumns(15);
-        userId.setText("Your id");
+        userName.setText("Please enter your name");
+
+
+        //userName.setVisible(false);
+
+        userId.setText("Please enter your id");
+        userId.setBounds(100,125,200,25);
+        userName.setBounds(100,100,200,25);
+        userIdLable.setBounds(10,125,200,20);
+        userNameLabel.setBounds(10,100,200,20);
+        logingButton.setBounds(10,200, 100,30);
+        creatAccountButton.setBounds(200,200,200,30);
         userPinCode.setColumns(15);
         userPinCode.setText("Your pin");
         userPinCode.setColumns(15);
         //Adding text fiels to pannels
-        panelA.add(userName);
+        add(userName);
+        add(userIdLable);
+        add(userNameLabel);
+        add(userId);
+        add(logingButton);
+        add(creatAccountButton);
         panelA.add(userAddress);
 
         //Adding items to pannel B
         creatAccountButton.addActionListener(this::actionPerformed);
-        panelB.add(creatAccountButton);
+
         panelB.add(savingAccountRb);
         panelB.add(currentAccoutRb);
         //addint the buttons
@@ -93,13 +118,13 @@ public class AtmMenu extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        currentAccoutRb.setVisible(true);
+        /*currentAccoutRb.setVisible(true);
         savingAccountRb.setVisible(true);
         userName.setVisible(true);
         userAddress.setVisible(true);
         checkBanlanceButton.setVisible(false);
         widrawCashButton.setVisible(false);
         makeDepositButton.setVisible(false);
-        creatAccountButton.setText("Click to create account");
+        creatAccountButton.setText("Click to create account");*/
     }
 }

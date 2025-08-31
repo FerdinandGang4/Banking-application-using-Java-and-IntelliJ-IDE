@@ -10,7 +10,7 @@ public class Main {
         AtmMenu frameA = new AtmMenu();
         frameA.setSize(600,300);
         frameA.setVisible(true);
-        frameA.setLayout(new FlowLayout());
+        frameA.setLayout(null);
         frameA.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }
