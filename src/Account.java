@@ -37,7 +37,7 @@ public class Account {
     }
     public void setUserID(int id)
     {
-        this.userName = name;
+        this.userID= id;
     }
     public void setUserAddress(String address)
     {
