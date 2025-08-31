@@ -6,7 +6,7 @@ public class Account {
      private int userID;
      private int pinCode;
      private  String	userAddress;
-
+     //We also need to know the account type (Saving or current account)
 
     //getters
     public int getUserID(String userName)
@@ -45,9 +45,9 @@ public class Account {
     }
 
     //constructor
-    public  Account(int id, String name)
+    public  Account(String addres, String name)
     {
-        this.userID = id;
+        this.userAddress = addres;
         this.userName = name;
     }
 

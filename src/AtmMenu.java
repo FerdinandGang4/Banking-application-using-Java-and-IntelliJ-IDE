@@ -10,6 +10,7 @@ public class AtmMenu extends JFrame implements ActionListener {
     JTextField userAddress;
     JTextField userId;
     JTextField userPinCode;
+
     Border transactionBorder;
     Border createAccoutBorder;
 
