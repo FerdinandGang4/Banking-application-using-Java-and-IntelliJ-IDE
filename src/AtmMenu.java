@@ -14,23 +14,27 @@ public class AtmMenu extends JFrame {
     JButton makeDepositButton;
     JButton widrawCashButton;
 
+    //Adding radio buttons
+    JRadioButton savingAccountRb;
+    JRadioButton currentAccoutRb;
 
     AtmMenu()
     {
         super("WELCOME TO MIU BANKING APP");
+        //text Fields
         userId = new JFormattedTextField();
-
         userPinCode = new JFormattedTextField();
-
         userName = new JTextField();
         userAddress = new JTextField();
-
+        //Buttons
         creatAccountButton = new JButton("Create Accout");
         checkBanlanceButton = new JButton("AccountBalance");
         makeDepositButton = new JButton("Make Deposite");
         widrawCashButton = new JButton("Widraw Cash");
 
-
+        //Initializing Radio buttons
+        savingAccountRb = new JRadioButton("Saving account");
+        currentAccoutRb = new JRadioButton("currentAccount");
         //adding the text fields to the pannel
         panelA = new JPanel();
         userAddress.setColumns(15);
@@ -42,6 +46,7 @@ public class AtmMenu extends JFrame {
         userPinCode.setColumns(15);
         userPinCode.setText("Your pin");
         userPinCode.setColumns(15);
+        //Adding text fiels to pannels
         panelA.add(userName);
         panelA.add(userId);
         panelA.add(userPinCode);
@@ -52,6 +57,9 @@ public class AtmMenu extends JFrame {
         add(checkBanlanceButton);
         add(widrawCashButton);
         add(makeDepositButton);
+        //Adding radio buttons to the frame
+        add(savingAccountRb);
+        add(currentAccoutRb);
 
     }
 }
